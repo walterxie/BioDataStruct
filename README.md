@@ -1,2 +1,2 @@
-# biodatastruct
-Provide fundamental data structure for bioinformatics data
+# BioDataStruct
+Provide fundamental data structures for bioinformatics data
