@@ -7,7 +7,7 @@ import java.util.stream.Stream;
  * @author Alexei Drummond
  * @author Arman Bilge
  */
-public interface Graph {
+public interface Graph<N extends Node<N, E>, E extends Edge<N>> {
 
     /**
      * Returns the Edge that connects these two nodes
@@ -16,7 +16,7 @@ public interface Graph {
      * @return the edge object.
      * @throws NoEdgeException if the nodes are not directly connected by an edge.
      */
-    Edge getEdge(Node node1, Node node2) throws NoEdgeException;
+    E getEdge(N node1, N node2) throws NoEdgeException;
 
     /**
      * Returns the length of the edge that connects these two nodes
@@ -25,25 +25,25 @@ public interface Graph {
      * @return the edge length.
      * @throws NoEdgeException if the nodes are not directly connected by an edge.
      */
-    default double getEdgeLength(Node node1, Node node2) throws NoEdgeException {
+    default double getEdgeLength(N node1, N node2) throws NoEdgeException {
         return getEdge(node1, node2).getLength();
     }
 
     /**
      * @return the set of all nodes in this graph.
      */
-    Stream<Node> getNodes();
+    Stream<N> getNodes();
 
     /**
      * @return the set of all edges in this graph.
      */
-    Stream<Edge> getEdges();
+    Stream<E> getEdges();
 
     /**
      * @param degree the number of edges connected to a node
      * @return a set containing all nodes in this graph of the given degree.
      */
-    default Stream<Node> getNodes(int degree) {
+    default Stream<N> getNodes(int degree) {
         return getNodes().filter(node -> node.getDegree() == degree);
     }
 

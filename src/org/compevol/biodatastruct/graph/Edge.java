@@ -10,13 +10,13 @@ package org.compevol.biodatastruct.graph;
  *
  * @version $Id: Edge.java 295 2006-04-14 14:59:10Z rambaut $
  */
-public interface Edge {
+public interface Edge<N extends Node> {
 
     /**
      * Returns an array of 2 nodes which are the nodes at either end of the edge.
      * @return an array of 2 edges
      */
-    Node[] getNodes();
+    N[] getNodes();
 
     double getLength();
 }

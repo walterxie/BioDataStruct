@@ -11,7 +11,7 @@ import java.util.stream.Stream;
  * @author Alexei Drummond
  * @author Arman Bilge
  */
-public interface Node {
+public interface Node<N extends Node, E extends Edge<N>> {
 
     /**
      * Get the number of edges connected to this node. (this is also the number of nodes connected to this node).
@@ -28,12 +28,12 @@ public interface Node {
      * Returns a list of edges connected to this node
      * @return the set of nodes that are attached by edges to the given node.
      */
-    Stream<Edge> getEdges();
+    Stream<E> getEdges();
 
     /**
      * Returns a list of nodes connected to this node by an edge
      * @return the set of nodes that are attached by edges to the given node.
      */
-    Stream<Node> getAdjacencies();
+    Stream<N> getAdjacencies();
 
 }
