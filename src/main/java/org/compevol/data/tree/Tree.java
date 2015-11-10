@@ -1,6 +1,6 @@
-package org.compevol.biodatastruct.tree;
+package org.compevol.data.tree;
 
-import org.compevol.biodatastruct.graph.Graph;
+import org.compevol.data.graph.Graph;
 
 import java.util.Arrays;
 import java.util.stream.Stream;

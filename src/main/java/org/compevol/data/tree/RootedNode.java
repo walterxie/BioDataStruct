@@ -1,4 +1,4 @@
-package org.compevol.biodatastruct.tree;
+package org.compevol.data.tree;
 
 import java.util.stream.Stream;
 

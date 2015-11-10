@@ -1,4 +1,4 @@
-name := "biodatastruct"
+name := "org/compevol/data"
 
 version := "1.0"
 

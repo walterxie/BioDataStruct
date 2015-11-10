@@ -1,4 +1,4 @@
-package org.compevol.biodatastruct.graph;
+package org.compevol.data.graph;
 
 import java.util.stream.Stream;
 

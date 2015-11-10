@@ -1,4 +1,4 @@
-package org.compevol.biodatastruct.tree;
+package org.compevol.data.tree;
 
 /**
  * @author Arman Bilge

@@ -6,7 +6,7 @@
  * This package is distributed under the
  * Lesser Gnu Public Licence (LGPL)
  */
-package org.compevol.biodatastruct.tree;
+package org.compevol.data.tree;
 
 /**
  * A tree with a root (node with maximum height). This interface

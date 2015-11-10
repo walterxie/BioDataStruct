@@ -1,4 +1,4 @@
-package org.compevol.biodatastruct.graph;
+package org.compevol.data.graph;
 
 /**
  * Represents a node in a graph or tree. In general it is
